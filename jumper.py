@@ -8,7 +8,7 @@ class JumperCommand(sublime_plugin.WindowCommand):
 	def on_change(self, text):
 		try:
 			if self.window.active_view():
-				self.window.active_view().run_command("jump_to_section", {"key": text, "pattern": "//  "})
+				self.window.active_view().run_command("jump_to_section", {"key": text, "pattern": "/// "})
 		except ValueError:
 			pass
 
